@@ -18,7 +18,8 @@ jobs:
         
       - name: Run update
         env:
-@@ -22,10 +25,20 @@
+         CF_HANDLE: IMRAX
+        run: |
           node scripts/update_cf.js
 
       - name: Commit and push
@@ -40,6 +41,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update Codeforces accepted stats"
+            git commit -m "Update Code_Task Contributions"
             git push
           fi
